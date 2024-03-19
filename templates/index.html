@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <title> {% block title %} new_django {% endblock title %} </title>
+</head>
+
+<body>
+<nav>
+    <ul class="nav nav-tabs">
+      <li class="nav-item {% if request.path == '/'  %} active {% endif %}">
+        <a class="nav-link" href="/">Active</a>
+      </li>
+      <li class="nav-item {% if request.path == '/service/'  %} active {% endif %}">
+        <a class="nav-link" href="/service">Services</a>
+      </li>
+      <li class="nav-item {% if request.path == '/blog/'  %} active {% endif %}">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
+      <li class="nav-item {% if request.path == '/contact/'  %} active {% endif %}">
+        <a class="nav-link" href="/contact">contact</a>
+      </li>
+    </ul>
+</nav>
+{% block body %}
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repellendus corporis unde aperiam? Dicta tenetur
+        aliquid optio voluptatibus eum repellat aut accusantium. Rerum provident pariatur nemo at ea in doloremque.
+    </div>
+
+{% endblock body %}
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
