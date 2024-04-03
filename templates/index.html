@@ -9,30 +9,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="/static/style.css">
-    <title> {% block title %} new_django {% endblock title %} </title>
+    <title> {% block title %} baxify {% endblock title %}</title>
 </head>
 
 <body>
-<nav>
-    <ul class="nav nav-tabs">
-      <li class="nav-item {% if request.path == '/'  %} active {% endif %}">
-        <a class="nav-link" href="/">Active</a>
-      </li>
-      <li class="nav-item {% if request.path == '/service/'  %} active {% endif %}">
-        <a class="nav-link" href="/service">Services</a>
-      </li>
-      <li class="nav-item {% if request.path == '/blog/'  %} active {% endif %}">
-        <a class="nav-link" href="/blog">Blog</a>
-      </li>
-      <li class="nav-item {% if request.path == '/contact/'  %} active {% endif %}">
-        <a class="nav-link" href="/contact">contact</a>
-      </li>
-    </ul>
-</nav>
+
+    <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/service">Service</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+      </ul>
+
 {% block body %}
+
     <div class="container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum repellendus corporis unde aperiam? Dicta tenetur
-        aliquid optio voluptatibus eum repellat aut accusantium. Rerum provident pariatur nemo at ea in doloremque.
+        <div class="row">
+            <div class="col">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam obcaecati quis earum, neque soluta deleniti veritatis ex ut alias blanditiis voluptates dolor ipsam autem error minus consequuntur impedit, eos delectus?
+            </div>
+        </div>
     </div>
 
 {% endblock body %}
